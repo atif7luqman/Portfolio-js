@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home - Atif Luqman</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Placeholder for header -->
+        <div id="header-placeholder"></div>
+
+        <div class="home" style="font-size: 24px;">
+            <div class="description">
+                <p>Hello!</p>
+                <h2>I'm <span style="color: yellow;">Atif Luqman</span></h2>
+                <div class="headings" id="animated-heading"></div>
+                <p>Computer Scientist</p>
+                <button class="button"><a href="https://www.linkedin.com/in/atif-luqman-051437249/">LinkedIn</a></button>
+                <button class="button transparent-button"><a href="https://drive.google.com/drive/folders/1OBY6CqxVI73wVihTG8NcYVyRmL8uigV9?usp=drive_link">Download</a></button>
+            </div>
+            <div class="cover" padding-bottom: 0;>
+                <img src="cover2.png" alt="cover image">
+            </div>
+        </div>
+
+
+        <script>
+        // Load the header.html file into the placeholder
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+
+                    // Add the click event for the menu icon after header is loaded
+                    const menuIcon = document.getElementById("menu-icon");
+                    const navMenu = document.getElementById("nav-menu");
+
+                    menuIcon.addEventListener("click", () => {
+                        navMenu.classList.toggle("active");
+                    });
+                });
+        });
+
+
+        const headings = ['Data Scientist', 'Web Developer', 'Software Engineer'];
+        let index = 0;
+
+        function typeText(text, callback) {
+            const headingElement = document.getElementById('animated-heading');
+            headingElement.innerHTML = ''; // Clear existing text
+            let i = 0;
+            const typingSpeed = 100; // Speed of typing (in ms)
+
+            const typingEffect = setInterval(() => {
+                if (i < text.length) {
+                    headingElement.innerHTML += text.charAt(i); // Add one letter at a time
+                    i++;
+                } else {
+                    clearInterval(typingEffect); // Stop typing
+                    setTimeout(callback, 1000); // Wait for 1 second before switching
+                }
+            }, typingSpeed);
+        }
+
+        function nextHeading() {
+            index = (index + 1) % headings.length; // Cycle through the headings
+            typeText(headings[index], nextHeading); // Type the next heading
+        }
+
+        // Start the typing effect once the page has loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            typeText(headings[index], nextHeading); // Start with the first heading
+        });
+        </script>
+
+    </body>
+</html>

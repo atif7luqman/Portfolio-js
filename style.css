@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    background-color: #333;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Hide the menu by default */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0;
+    }
+
+    /* Show the menu when the button is clicked */
+    .nav-menu.active {
+        left: 0;
+    }
+}
+
+
+/* CSS for home page */
+.home {
+    display: flex;
+}
+
+.description, .cover {
+    width: 80%;
+    padding: 50px 50px 0px;
+}
+
+.headings {
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    display: inline-block;
+    padding-right: 5px;
+    animation: blink 0.75s step-end infinite; /* Blinking cursor */
+}
+
+.button {
+    padding: 10px 40px;
+    border-radius: 20px; 
+    font-style: none;
+    background-color: yellow; 
+    border: 1px solid white;
+    /* color: black;  */
+    font-size: 16px; 
+    cursor: pointer; 
+    text-align: center; 
+}
+
+.button a {
+    text-decoration: none;
+    color: black; 
+}
+
+.transparent-button {
+    background: transparent; 
+}
+
+.transparent-button a {
+    color: white;
+}
+
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+
+@media screen and (max-width: 768px) {
+    .home {
+        display: block;
+    }
+
+    .description, .cover {
+        width: 100%;
+    }
+}

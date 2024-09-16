@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Portfolio</title>
+    <link rel="stylesheet" href="skills.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <section class="skills-section" id="skills-section">
+        <div class="skill-heading" style="text-align: center;">
+            <h1>My skills</h1>
+        </div>
+        <div class="container">
+            <div class="skill">
+                <span>Front End Development</span>
+                <div class="progress-bar"><div style="width: 80%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Bootstrap</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>React.js</span>
+                <div class="progress-bar"><div style="width: 75%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Nodejs</span>
+                <div class="progress-bar"><div style="width: 60%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>DBMS</span>
+                <div class="progress-bar"><div style="width: 85%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Java</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>PYTHON</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Data Structures & Algorithms</span>
+                <div class="progress-bar"><div style="width: 95%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Data Science</span>
+                <div class="progress-bar"><div style="width: 95%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Statistical Data Analysis & Data visualization</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Machine Learning</span>
+                <div class="progress-bar"><div style="width: 85%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Deep Learning</span>
+                <div class="progress-bar"><div style="width: 80%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Convolutional Neural Networks (CNNs)</span>
+                <div class="progress-bar"><div style="width: 90%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Natural Language Processing (NLP)</span>
+                <div class="progress-bar"><div style="width: 75%;"></div></div>
+            </div>
+            <div class="skill">
+                <span>Computer Vision (CV)</span>
+                <div class="progress-bar"><div style="width: 70%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Load the header.html file into the placeholder
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+
+                    // Add the click event for the menu icon after header is loaded
+                    const menuIcon = document.getElementById("menu-icon");
+                    const navMenu = document.getElementById("nav-menu");
+
+                    menuIcon.addEventListener("click", () => {
+                        navMenu.classList.toggle("active");
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

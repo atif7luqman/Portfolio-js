@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certifications.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+    <div class="cert-heading">
+        <h1>My Certifications</h1>
+    </div>
+    <div class="cert-container">
+        <div class="certification-card">
+            <div class="certification-info">
+                <h2 class="certification-title">Deep Learning: Getting Started</h2>
+                <p class="certification-issuer"> <span> Issued by: </span> LinkedIn</p>
+                <p class="certification-date"> <span> Issue date: </span> Sep 2024</p>
+                <p class="certification-description">
+                    In this course I learned basics of deep learning to started career in Deep Learning.
+                </p>
+                <button class="button certification-link"><a href="https://www.linkedin.com/learning/certificates/a7cb6ce1fee16395ee7c5f321504ba0f60fcd701e00b894cb51a3695cf3e3562"  target="_blank">View Certificate</a>
+                </button>
+            </div>
+        </div>
+
+        <div class="certification-card">
+            <div class="certification-info">
+                <h2 class="certification-title">React.js Essential Training</h2>
+                <p class="certification-issuer"> <span> Issued by: </span> LinkedIn</p>
+                <p class="certification-date"> <span> Issue date: </span> Sep 2024</p>
+                <p class="certification-description">
+                    In this course I learned React.js, its conceptual and practical aspects.
+                </p>
+                <button class="button certification-link"><a href="https://www.linkedin.com/learning/certificates/72374fa41cbebe812ce6d6401e0fc3c069a891ebb0caa60fb251968036ef0904?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BFHGDfuS%2BSrmLb7ofgrPzQg%3D%3D" target="_blank">View Certificate</a></button>
+            </div>
+        </div>
+        
+        <div class="certification-card">
+            <div class="certification-info">
+                <h2 class="certification-title">Programming with javaScript</h2>
+                <p class="certification-issuer"> <span> Issued by: </span> Meta through coursera</p>
+                <p class="certification-date"> <span> Issue date: </span> Feb 2024</p>
+                <p class="certification-description">
+                    In this course I learned React.js, its conceptual and practical aspects.
+                </p>
+                <button class="button certification-link"><a href="https://www.coursera.org/account/accomplishments/verify/FDD23UNL7L7G"  target="_blank">View Certificate</a></button>
+            </div>
+        </div>
+
+        <div class="certification-card">
+            <div class="certification-info">
+                <h2 class="certification-title">React Basics</h2>
+                <p class="certification-issuer"> <span> Issued by: </span> Meta through Coursera</p>
+                <p class="certification-date"> <span> Issue date: </span> Jan 2024</p>
+                <p class="certification-description">
+                    In this course I learned basics of React.js.
+                </p>
+                <button class="button certification-link"><a href="https://www.coursera.org/account/accomplishments/verify/39GBFXL4QUBY" target="_blank">View Certificate</a></button>
+            </div>
+        </div>
+
+        <div class="certification-card">
+            <div class="certification-info">
+                <h2 class="certification-title">Supervised Machine Learning: Regression and Classification</h2>
+                <p class="certification-issuer"> <span> Issued by: </span> DeepLearning.AI, Standfod University</p>
+                <p class="certification-date"> <span> Issue date: </span> Jan 2024</p>
+                <p class="certification-description">
+                    In this course, I learned basics of Machine Learning, Machine Learning project life cycle from preprocessing to model evaluation.
+                </p>
+                <button class="button certification-link"><a href="https://www.coursera.org/account/accomplishments/verify/M8E6FR77FZVH" target="_blank">View Certificate</a></button>
+            </div>
+        </div>
+
+        <!-- Repeat certification-card div for each certification -->
+
+    </div>
+
+    <script>
+        // Load the header.html file into the placeholder
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+
+                    // Add the click event for the menu icon after header is loaded
+                    const menuIcon = document.getElementById("menu-icon");
+                    const navMenu = document.getElementById("nav-menu");
+
+                    menuIcon.addEventListener("click", () => {
+                        navMenu.classList.toggle("active");
+                    });
+                });
+        });
+    </script>
+</body>
+</html>

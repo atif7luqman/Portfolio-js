@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Atif Luqman</title>
+    <link rel="stylesheet" href="biodata.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
+
+    <section class="about-section" id="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-left">
+                    <div class="profile-image">
+                        <img src="cover1.png" class="img-fluid" alt="Atif Luqman">
+                    </div>
+                    <div class="about-info">
+                        <p><strong>Name:</strong> Atif Luqman</p>
+                        <p><strong>Field of Study:</strong> Computer Science</p>
+                        <p><strong>Nationality:</strong> Pakistan</p>
+                        <p><strong>Residency:</strong> Naushahro Feroze, Sindh, Pakistan</p>
+                        <p><strong>Address:</strong> Sindh, Pakistan</p>
+                        <p><strong>Phone:</strong> +923092454131</p>
+                        <p><strong>WhatsApp:</strong> +923253039028</p>
+                    </div>
+                </div>
+
+                <div class="col-right">
+                    <h1>Bio Data</h1>
+                    <p style="margin: 10px 0px; font-size: 14px;">Aspiring Data Scientist and AI Specialist with a strong foundation in Artificial Intelligence, Machine Learning, Deep Learning, and Computer Vision. Experienced in building and deploying state-of-the-art models for real-world applications, including Explainable AI and healthcare diagnostics. Skilled in web development and Generative AI technologies, as well as working with large datasets and advanced predictive models. Currently pursuing a BS in Computer Science from Sukkur IBA University, with a passion for applying cutting-edge technologies to solve complex problems and create impactful solutions.</p>
+                    <hr>
+                    <ul class="about-info-list">
+                        <li><strong>Areas of Intrest:</strong> Data Science | Artificial Intelligence | Machine Learning | Deep Learning | LLMs | Generative AI | Explainable AI | Computer Vision</li>
+                        <li><strong>Education:</strong> Bachelors in Computer Science</li>
+                        <li><strong>Language:</strong> English, Sindhi, & Urdu</li>
+                        <li><strong>Institute:</strong> Sukkur IBA University</li>
+                    </ul>
+
+                    <!-- <div class="projects">
+                        <span><strong>25+</strong> Projects completed</span>
+                    </div> -->
+
+                    <button class="button btn"><a href="https://www.linkedin.com/in/atif-luqman-051437249/">LinkedIn</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+
+                // Add the click event for the menu icon after header is loaded
+                const menuIcon = document.getElementById("menu-icon");
+                const navMenu = document.getElementById("nav-menu");
+
+                menuIcon.addEventListener("click", () => {
+                    navMenu.classList.toggle("active");
+                });
+            });
+    });
+    </script>
+
+</body>
+</html>

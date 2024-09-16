@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.col-right {
+    flex: 2;
+    padding: 20px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.about-info p {
+    margin: 10px 0;
+}
+
+.about-info-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-info-list li {
+    margin: 5px 0;
+}
+
+.projects {
+    margin-top: 20px;
+}
+
+.projects span {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.skills-section {
+    margin: 20px 0;
+}
+
+.skills-section h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    height: 10px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.progress-bar div {
+    height: 100%;
+    background-color: yellow;
+    border-radius: 5px;
+}

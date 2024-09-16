@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <!-- Placeholder for header -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <div class="project-card">
+            <img src="/Portfolio.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Personal Portfolio</h2>
+                <p class="project-description">
+                    <span class="short-description">In this project, I have developed my portfolio website.</span>
+                    <span class="full-description">I have used HTML, CSS and JavaScript to build my portfolio website. In my portfolio, I have developed home, bio-data, skills and certificatoins pages.</span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://github.com/user/project1">GitHub</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="/Hira.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Hira Website</h2>
+                <p class="project-description">
+                    <span class="short-description">In this project, I along with my group mate developed a website in React.</span>
+                    <span class="full-description">We worked on Front end design and development. </span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://github.com/atif7luqman/Hira_Hospital_Project.git" target="_blank">GitHub</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/MusicPlayer.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Music Player</h2>
+                <p class="project-description">
+                    <span class="short-description">In this project, I developed a smiple Music Player Interface.</span>
+                    <span class="full-description">I used used HTML, CSS and JavaScript. This was a very simple project, in which you can play, pause, and apply all functionalities on a single song.</span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://github.com/atif7luqman/Music-Player.git" target="_blank">GitHub</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/quizapp.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Quiz App</h2>
+                <p class="project-description">
+                    <span class="short-description">In this project, I developed a simple quiz website using React.</span>
+                    <span class="full-description">In this project, I provided limited questions. You can attempt the quiz and can see results in last.</span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://github.com/atif7luqman/Quiz4.git" >GitHub</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/elearning.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Elearning Website</h2>
+                <p class="project-description">
+                    <span class="short-description">In this project, I have developed an elearning website using a template.</span>
+                    <span class="full-description">I have used an already builtin template for this project, then I modified it my needs.</span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://github.com/atif7luqman/Elearning.git" target="_blank">GitHub</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="/bcd.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h2 class="project-title">Breast Cancer Detection System</h2>
+                <p class="project-description">
+                    <span class="short-description">Brief description of the project goes here.</span>
+                    <span class="full-description">This is the full description of the project that will be revealed when the "Read More" button is clicked. It provides an in-depth overview of what the project is about, including details and specifics.</span>
+                </p>
+                <div class="project-buttons">
+                    <button class="button btn"><a href="project1.html" class="read-more" onclick="toggleDescription(event)">Read More</a></button>
+                    <button class="button transparent-button btn"><a href="https://colab.research.google.com/drive/1w3z2l-haDkWDB7eohiwn67k8Lstq77CK" target="_blank">Colab</a></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Repeat project-card div for each project -->
+    </div>
+
+    <script>
+        // Load the header.html file into the placeholder
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-placeholder").innerHTML = data;
+        
+                    // Add the click event for the menu icon after header is loaded
+                    const menuIcon = document.getElementById("menu-icon");
+                    const navMenu = document.getElementById("nav-menu");
+        
+                    menuIcon.addEventListener("click", () => {
+                        navMenu.classList.toggle("active");
+                    });
+                });
+        });
+
+        function toggleDescription(event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            const card = event.target.closest('.project-card');
+            const description = card.querySelector('.project-description');
+
+            description.classList.toggle('expanded');
+
+            const isExpanded = description.classList.contains('expanded');
+            event.target.textContent = isExpanded ? 'Read Less' : 'Read More';
+        }
+    </script>
+</body>
+</html>
